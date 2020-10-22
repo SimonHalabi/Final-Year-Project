@@ -1,0 +1,194 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thanks
+  - out_of_scope
+  - sheep_position
+  - sheep_velocity
+  - drone_position
+  - drone_velocity
+  - drone_battery
+  - drone_actions
+  - sheep_psych
+  - drone_sheep_dynamic
+  - sheep_sheep_dynamic
+  - human_drone_dynamic
+  - drone_altitude
+
+entities:
+  - sheep_position
+  - sheep_velocity
+  - drone_position
+  - drone_velocity
+  - drone_battery
+  - drone_actions
+  - sheep_psych
+  - drone_sheep_dynamic
+  - sheep_sheep_dynamic
+  - human_drone_dynamic
+  - drone_altitude
+
+slots:
+  sheep_position:
+    type: unfeaturized
+  sheep_velocity:
+    type: unfeaturized
+  drone_position:
+    type: unfeaturized
+  drone_velocity:
+    type: unfeaturized
+  drone_battery:
+    type: unfeaturized
+  drone_actions:
+    type: unfeaturized
+  sheep_psych:
+    type: unfeaturized
+  drone_sheep_dynamic:
+    type: unfeaturized
+  sheep_sheep_dynamic:
+    type: unfeaturized
+  human_drone_dynamic:
+    type: unfeaturized
+  drone_altitude:
+    type: unfeaturized
+
+
+#entities:
+#- facility_type
+#- facility_id
+#- location
+
+#slots:
+#  facility_type:
+#    type: unfeaturized
+#  facility_address:
+#    type: unfeaturized
+#  facility_id:
+#    type: unfeaturized
+#  location:
+#    type: unfeaturized
+
+forms:
+- sheep_position_form
+- sheep_velocity_form
+- drone_position_form
+- drone_velocity_form
+- drone_battery_form
+- drone_actions_form
+- sheep_psych_form
+- drone_sheep_dynamic_form
+- sheep_sheep_dynamic_form
+- human_drone_dynamic_form
+- drone_altitude_form
+
+actions:
+- utter_noworries
+- utter_greet
+- utter_goodbye
+- utter_sheep_position
+- utter_out_of_scope
+- utter_sheep_velocity
+- utter_drone_position
+- utter_drone_velocity
+- utter_drone_battery
+- utter_drone_actions
+- utter_sheep_psych
+- utter_drone_sheep_dynamic
+- utter_sheep_sheep_dynamic
+- utter_human_drone_dynamic
+- find_sheep_position
+- find_sheep_velocity
+- find_drone_position
+- find_drone_velocity
+- find_drone_battery
+- find_drone_actions
+- find_sheep_psych
+- find_drone_sheep_dynamic
+- find_sheep_sheep_dynamic
+- find_human_drone_dynamic
+- find_drone_altitude
+
+templates:
+  utter_greet:
+  - text: "Hi. How can I help?"
+  - text: "Hey there! What can I do for you?"
+  - text: "Hello! What do you need help with?"
+
+  utter_goodbye:
+  - text: "Talk to you later!"
+  - text: "Have a good day."
+  - text: "Until next time!"
+
+  utter_noworries:
+  - text: "My pleasure."
+  - text: "You are welcome!"
+  - text: "No problem."
+
+  utter_sheep_position:
+  - text: "Your sheep are located at {sheep_position}."
+  - text: "The sheep are currently at {sheep_position}."
+  - text: "You can find your sheep at {sheep_position}."
+
+  utter_out_of_scope:
+  - text: "I'm afraid I don't understand the question, please try rephrasing it."
+  - text: "I'm not sure what you're saying, please ask again."
+  - text: "I'm not quite understanding what you're asking for, please ask the question again."
+
+  utter_sheep_velocity:
+  - text: "Your sheep's velocity is {sheep_velocity} kilometres per hour."
+  - text: "The sheep is currently traveling at {sheep_velocity} kilometres per hour."
+  - text: "The sheep's speed is {sheep_velocity} kilometres per hour."
+
+  utter_drone_position:
+  - text: "Your drone is located at {drone_position}."
+  - text: "The drone is currently at {drone_position}."
+  - text: "You can find your drone at {drone_position}."
+
+  utter_drone_velocity:
+  - text: "Your drone's velocity is {drone_velocity} kilometres per hour."
+  - text: "The drone is currently traveling at {drone_velocity} kilometres per hour."
+  - text: "The drone's speed is {drone_velocity} kilometres per hour."
+
+  utter_drone_battery:
+  - text: "Your drone's battery is at {drone_battery} percent."
+  - text: "The drone currently has {drone_battery} percent battery remaining."
+  - text: "The drone has {drone_battery} percent battery left."
+
+  utter_drone_actions:
+  - text: "Your drone is performing action {drone_actions}."
+  - text: "The drone is currently performing action {drone_actions}."
+  - text: "The drone is carrying out action {drone_actions}."
+
+  utter_sheep_psych:
+  - text: "Your sheep are psychological state {sheep_psych}."
+  - text: "The sheep are currently psychological state {sheep_psych}."
+  - text: "The sheep appear to be psychological state {sheep_psych}."
+
+  utter_drone_sheep_dynamic:
+  - text: "Your sheep are having reaction {drone_sheep_dynamic} to the drone."
+  - text: "The sheep are responding to the drone with reaction {drone_sheep_dynamic}."
+  - text: "The sheep appear to be having reaction {drone_sheep_dynamic} caused by the drone."
+
+  utter_sheep_sheep_dynamic:
+  - text: "Your sheep are in formation {sheep_sheep_dynamic}."
+  - text: "The sheep appear to currently be in formation {sheep_sheep_dynamic}."
+  - text: "The sheep look like they are in formation {sheep_sheep_dynamic}."
+
+  utter_human_drone_dynamic:
+  - text: "Your drone is carrying out instruction {human_drone_dynamic}."
+  - text: "The drone appears to be executing instruction {human_drone_dynamic}."
+  - text: "Instruction {human_drone_dynamic} is what the drone is currently doing."
+
+  utter_drone_altitude:
+  - text: "Your drone is currently flying at an altitude of {drone_altitude} metres"
+  - text: "The drone's height is {drone_altitude} metres"
+  - text: "The drone has an altitude of {drone_altitude} metres"
+
+#forms:
+#  - Form_Info
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
