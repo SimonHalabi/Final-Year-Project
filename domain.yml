@@ -98,6 +98,7 @@ actions:
 - utter_drone_sheep_dynamic
 - utter_sheep_sheep_dynamic
 - utter_human_drone_dynamic
+- utter_drone_altitude
 - find_sheep_position
 - find_sheep_velocity
 - find_drone_position
